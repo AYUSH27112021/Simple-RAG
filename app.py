@@ -33,7 +33,7 @@ def init_db():
     cursor.close()
     conn.close()
 
-init_db()  # Call on startup
+init_db()
 
 # Store message in DB
 def save_message(role, content):
@@ -52,10 +52,10 @@ def chat():
     if not user_query:
         return jsonify({"error": "Query cannot be empty"}), 400
 
-    # Call GraphRag for chatbot response
+    # Call GraphRag
     inputs = {"question": user_query, "max_retries": 3}
     response = graph_rag.invoke_graph(inputs)
-    # Save both user query and response
+    # Save
     save_message("user", user_query)
     save_message("system", response)
 
