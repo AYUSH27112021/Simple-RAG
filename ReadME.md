@@ -107,6 +107,8 @@ This script sends test requests to the Flask API and verifies responses.
 
 A video showcasing the working chatbot is included in the project.
 
+https://github.com/user-attachments/assets/8a6d664f-a44b-4f85-8205-cf29854a0955
+
 ## Future Enhancements
 
 - Implement user authentication
